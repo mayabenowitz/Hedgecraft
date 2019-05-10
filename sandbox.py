@@ -1,16 +1,18 @@
 import pandas as pd
 import numpy as np
 import preproc as pre
-import detrend as dtr
+import detrend as dd
 import networkx as nx
 import build_corr_nx as bnx
 import matplotlib.pyplot as plt
 import seaborn as sns
-from networkx.algorithms import approximation
+from time_series_nx import ts_corr_network
 
 
 def sandbox_nx():
-    H = bnx.build_nx()
+    df = dd.detrend()
+    df.dropna(inplace=True)
+    H = ts_corr_network(df, corr_param='dcor', prune=0.35)
 
     #    paths_ll = []
 
@@ -38,10 +40,7 @@ def sandbox_nx():
     #            else:
     #                paths.append([p for p in nx.shortest_path(H, source=u, target=v)])
 
-    preds = nx.preferential_attachment(H)
-    df = pd.DataFrame(preds)
-    df = df.pivot(index=0, columns=1, values=2)
-    print(df)
+    return print(nx.shortest_path_length(H, source='UNH', target='AABA', weight='weight'))
 
 
 #    perph = nx.periphery(H)
