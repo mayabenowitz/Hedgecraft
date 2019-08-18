@@ -23,6 +23,24 @@ python3 {filename}.py
 
 E.g., typing
 
-```python plt_corr_nx.py```
+```html
+python plt_corr_nx.py
+```
 
 in the terminal will plot a time series correlation network using the the data in the repository.
+
+## Dependencies
+
+A comprehensive list of current dependencies include the following libraries
+
+```html
+Pandas (data manipulation)
+Numpy (scientific computing)
+Scipy (statistical computing)
+dcor (energy statistics)
+NetworkX (graph analytics)
+Matplotlib (plotting)
+Seaborn (plotting)
+pypfopt (portfolio optimization)
+datetime (dates & times)
+```
