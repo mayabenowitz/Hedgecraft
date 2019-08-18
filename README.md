@@ -1,10 +1,28 @@
-# Hedgecraft
-For an introduction to this project please see the [Hedgecraft notebook](https://nbviewer.jupyter.org/github/mayabenowitz/Hedgecraft/blob/master/notebooks/Hedgecraft.ipynb). The scripts in the main repository are configured to run from the command line. Clone or download the repository and in the relative path type
+# About
 
-```python {filename}.py```
+Hedgecraft is an open-source portfolio selection algorithm that address many of the shortcomings of the efficient frontier model of modern portfolio theory (MPT). The algorithm is designed to handle historical time series of unequal dimensions, enabling optimization across asset classes with sparse data. For a comprehensive walkthrough of the project please see the [Hedgecraft notebook](https://nbviewer.jupyter.org/github/mayabenowitz/Hedgecraft/blob/master/notebooks/Hedgecraft.ipynb).
 
-in the terminal. E.g.,
+## Installation
+
+First clone the repository in a local folder
+
+```html
+git clone https://github.com/mayabenowitz/Hedgecraft.git
+```
+
+then run the scripts from the terminal with
+
+```html
+python {filename}.py
+```
+or
+
+```html
+python3 {filename}.py
+```
+
+E.g., typing
 
 ```python plt_corr_nx.py```
 
-will plot a time series correlation network using the the data in the repo.
+in the terminal will plot a time series correlation network using the the data in the repository.
